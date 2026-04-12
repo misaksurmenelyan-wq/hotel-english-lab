@@ -388,16 +388,15 @@ section {
 }
 
 .section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 20px;
+  display: grid;
+  gap: 12px;
   margin-bottom: 24px;
 }
 
 .section-head h2 {
   font-size: clamp(2.05rem, 3.6vw, 3.5rem);
-  max-width: 12ch;
+  max-width: none;
+  width: 100%;
 }
 
 .role-tabs {
@@ -611,12 +610,11 @@ section {
   }
 
   .section-head {
-    align-items: start;
-    flex-direction: column;
+    gap: 12px;
   }
 
   .section-head h2 {
-    max-width: 16ch;
+    max-width: none;
   }
 }
 
