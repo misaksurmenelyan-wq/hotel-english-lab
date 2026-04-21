@@ -35,6 +35,27 @@ pnpm preview
 pnpm generate
 ```
 
+## GitHub Pages
+
+По документации Nuxt для GitHub Pages сайт должен собираться как статический и получать `baseURL`, равный имени репозитория. В этом проекте для этого добавлен workflow:
+
+- `.github/workflows/deploy.yml`
+- build-команда `pnpm build:github-pages`
+
+Локальная проверка Pages-сборки:
+
+```bash
+NUXT_APP_BASE_URL=/hotel-english-lab/ pnpm build:github-pages
+```
+
+После push в `main` workflow соберет статический сайт и опубликует `.output/public` в GitHub Pages.
+
+Ссылка сайта для этого репозитория:
+
+```text
+https://misaksurmenelyan-wq.github.io/hotel-english-lab/
+```
+
 ## Что можно развивать дальше
 
 - разнести секции по отдельным Vue-компонентам
