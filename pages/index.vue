@@ -19,7 +19,7 @@ useSeoMeta({
 
     <main id="home" class="pb-[72px]">
       <HomeHeroSection />
-      <HomeVideoSection />
+      <!-- <HomeVideoSection /> -->
       <HomeHighlightsSection />
       <HomeRolesSection />
       <HomeFormatSection />
