@@ -1,71 +1,43 @@
 # Hotel English
 
-Учебный одностраничный сайт для курса английского языка в сфере гостиничного бизнеса.
+Лендинг курса английского языка для гостиничного бизнеса, перенесенный на `Nuxt 3 + Vue 3 + Tailwind CSS` с `pnpm`.
 
-## Что внутри
+## Структура
 
-- `index.html` - структура сайта
-- `styles.css` - оформление и адаптивность
-- `script.js` - переключение ролей и анимации появления блоков
+- `pages/index.vue` - основная страница лендинга
+- `components/CustomVideoPlayer.vue` - кастомный HTML5-плеер на Vue
+- `components/RevealBlock.vue` - анимация появления секций при скролле
+- `components/SiteHeader.vue` - шапка и навигация
+- `assets/css/main.css` - глобальные стили, тема и стили плеера
+- `public/video/` - локальные видеофайлы и постер
 
-## Как открыть сайт локально
+## Запуск локально
 
-1. Открой папку `english` в `VS Code`.
-2. Запусти файл `index.html` через расширение `Live Server` или просто открой его в браузере.
-
-## Как выложить сайт на GitHub Pages
-
-### Вариант 1: без Git, через сайт GitHub
-
-1. Создай новый репозиторий на GitHub, например `hotel-english-lab`.
-2. Нажми `uploading an existing file`.
-3. Перетащи в репозиторий файлы:
-   - `index.html`
-   - `styles.css`
-   - `script.js`
-   - `README.md`
-4. Нажми `Commit changes`.
-5. Открой `Settings` -> `Pages`.
-6. В блоке `Build and deployment` выбери:
-   - `Source`: `Deploy from a branch`
-   - `Branch`: `main`
-   - `Folder`: `/ (root)`
-7. Сохрани настройки.
-8. Через пару минут сайт появится по адресу:
-
-```text
-https://USERNAME.github.io/hotel-english-lab/
+```bash
+pnpm install
+pnpm dev
 ```
 
-### Вариант 2: через Git из терминала VS Code
+По умолчанию Nuxt поднимет проект на `http://localhost:3000`.
 
-1. Создай новый репозиторий на GitHub, например `hotel-english-lab`.
-2. В терминале `VS Code` открой папку проекта и выполни:
+Для проекта зафиксирован `Node.js 22.16.0` через `.tool-versions` (`asdf`).
 
-```powershell
-git init
-git add .
-git commit -m "Initial site"
-git branch -M main
-git remote add origin https://github.com/USERNAME/hotel-english-lab.git
-git push -u origin main
+## Сборка
+
+```bash
+pnpm build
+pnpm preview
 ```
 
-3. На GitHub открой `Settings` -> `Pages`.
-4. В блоке `Build and deployment` выбери:
-   - `Source`: `Deploy from a branch`
-   - `Branch`: `main`
-   - `Folder`: `/ (root)`
-5. Сохрани настройки.
-6. Через пару минут сайт появится по адресу:
+Если нужен статический экспорт:
 
-```text
-https://USERNAME.github.io/hotel-english-lab/
+```bash
+pnpm generate
 ```
 
-## Что можно добавить позже
+## Что можно развивать дальше
 
-- страницу с отдельными уроками
-- встроенные видео
-- блок с тестами и формой обратной связи
-- английскую версию сайта
+- разнести секции по отдельным Vue-компонентам
+- добавить отдельные страницы уроков через файловый роутинг Nuxt
+- вынести контент курса в JSON или CMS
+- подключить формы заявок и аналитику
