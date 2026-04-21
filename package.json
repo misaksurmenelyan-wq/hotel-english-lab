@@ -1,6 +1,7 @@
 {
   "name": "hotel-english-lab",
   "private": true,
+  "packageManager": "pnpm@10.17.1",
   "type": "module",
   "scripts": {
     "build": "nuxt build",
